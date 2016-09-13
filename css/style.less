@@ -1,0 +1,158 @@
+body,div{ margin: 0; padding: 0;}
+@TJ-wh: 400px;
+.borderRadius(){
+    border-radius: 50%;
+}
+.bgWhite(){ background: #fff;}
+.bgBlack(){ background: #000;}
+.TJ{
+    position: relative;
+    width: @TJ-wh;
+    height: @TJ-wh;
+    margin: 0 auto;
+    .borderRadius();
+    .bgBlack();
+    border: #000 5px solid;
+    .TJ{
+        .bgWhite();
+        border: 0 none;
+    }
+}
+.half_circle{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.pos(@t,@l){
+    position: absolute;
+    top:@t;
+    left:@l;
+}
+
+.small_black,.small_white{
+    .pos(@t:0,@l:50%);
+    width: 50%;
+    height: 50%;
+    margin-left: -25%;
+    .bgBlack();
+    .borderRadius();
+    i{
+        .pos(@t:50%,@l:50%);
+        .bgWhite();
+        width: 20%;
+        height: 20%;
+        margin-top: -10%;
+        margin-left: -10%;
+        .borderRadius();
+    }
+}
+
+.small_white{
+    .pos(@t:50%,@l:50%);
+    .bgWhite();
+    i{
+        .bgBlack();
+    }
+}
+
+//.transform(@var){
+//  transform: e(@var);
+//  -webkit-transform: e(@var);
+//  -moz-transform: e(@var);
+//  -ms-transform: e(@var);
+//  -o-transform: e(@var);
+//}
+
+.key(@name,@startVal,@var){
+    @keyframes @name{
+        from{
+            transform: e(@startVal);
+        }
+        to{
+            transform: e(@var);
+        }
+    }
+    @-webkit-keyframes @name{
+        from{
+            -webkit-transform: e(@startVal);
+        }
+        to{
+            -webkit-transform: e(@var);
+        }
+    }
+    @-moz-keyframes @name{
+        from{
+            -moz-transform: e(@startVal);
+        }
+        to{
+            -moz-transform: e(@var);
+        }
+    }
+    @-o-keyframes @name{
+        from{
+            -o-transform: e(@startVal);
+        }
+        to{
+            -o-transform: e(@var);
+        }
+    }
+    @-ms-keyframes @name{
+        from{
+            -ms-transform: e(@startVal);
+        }
+        to{
+            -ms-transform: e(@var);
+        }
+    }
+}
+
+.key(@name:TJ-animate,@startVal:"0deg",@var:"rotate(360deg)");
+
+.ani(@var){
+    animation: e(@var);
+    -webkit-animation: e(@var);
+    -moz-animation: e(@var);
+    -o-animation: e(@var);
+}
+
+.animate{
+    .ani(@var:"TJ-animate 3s linear infinite");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,101 @@
+body,
+div {
+  margin: 0;
+  padding: 0;
+}
+.TJ {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #000;
+  border: #000 5px solid;
+}
+.TJ .TJ {
+  background: #fff;
+  border: 0 none;
+}
+.half_circle {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.small_black,
+.small_white {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  margin-left: -25%;
+  background: #000;
+  border-radius: 50%;
+}
+.small_black i,
+.small_white i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  width: 20%;
+  height: 20%;
+  margin-top: -10%;
+  margin-left: -10%;
+  border-radius: 50%;
+}
+.small_white {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+}
+.small_white i {
+  background: #000;
+}
+@keyframes TJ-animate {
+  from {
+    transform: 0deg;
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes TJ-animate {
+  from {
+    -webkit-transform: 0deg;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes TJ-animate {
+  from {
+    -moz-transform: 0deg;
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-o-keyframes TJ-animate {
+  from {
+    -o-transform: 0deg;
+  }
+  to {
+    -o-transform: rotate(360deg);
+  }
+}
+@-ms-keyframes TJ-animate {
+  from {
+    -ms-transform: 0deg;
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+.animate {
+  animation: TJ-animate 3s linear infinite;
+  -webkit-animation: TJ-animate 3s linear infinite;
+  -moz-animation: TJ-animate 3s linear infinite;
+  -o-animation: TJ-animate 3s linear infinite;
+}
